@@ -2,14 +2,14 @@ apply plugin: 'com.android.application'
 apply plugin: 'android-apt'
 apply plugin: 'realm-android'
 android {
-    signingConfigs {
-        xm6leefun {
-            storeFile file('D:/workspace/studio/beybow/NorthBaby/app/xm6leefun.jks')
-            storePassword 'xm6leefun'
-            keyAlias 'weecot'
-            keyPassword 'weecot8023'
-        }
-    }
+//    signingConfigs {
+//        xm6leefun {
+//            storeFile file('D:/workspace/studio/beybow/NorthBaby/app/xm6leefun.jks')
+//            storePassword 'xm6leefun'
+//            keyAlias 'weecot'
+//            keyPassword 'weecot8023'
+//        }
+//    }
     compileSdkVersion 27
     buildToolsVersion '27.0.2'
     dexOptions {
