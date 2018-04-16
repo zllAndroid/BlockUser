@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+    <include
+        layout="@layout/include_subactivity_top"
+        />
+
+    <com.xm6leefun.zll_user.ui_custom.CusScrollView
+        android:id="@+id/weshop_myscroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="@dimen/dp10"
+                android:textSize="@dimen/sp15"
+                android:text="NFC防伪操作说明"
+                android:textColor="@color/gray666" />
+            <View
+                style="@style/style_wei_line"
+                >
+            </View>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp10"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/his_details_tv_order_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center_vertical"
+                    android:text="1、将手机中的NFC功能打开"
+                    android:textSize="@dimen/sp14"
+                    android:textColor="@color/gray333" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:textSize="@dimen/sp12"
+                    android:layout_margin="@dimen/dp8"
+                    android:paddingLeft="@dimen/dp20"
+                    android:text="设置-->更多-->NFC"
+                    android:textColor="@color/gray666" />
+
+
+                    <ImageView
+                        android:id="@+id/imageView9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        app:srcCompat="@drawable/say1" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="@dimen/dp10"
+                    android:textColor="@color/gray333"
+                    android:textSize="@dimen/sp14"
+                    android:layout_marginBottom="@dimen/dp10"
+                    android:text="2、将手机放在瓶盖NFC感应区" />
+
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        app:srcCompat="@drawable/say2" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </com.xm6leefun.zll_user.ui_custom.CusScrollView>
+</LinearLayout>

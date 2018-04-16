@@ -1,0 +1,144 @@
+apply plugin: 'com.android.application'
+apply plugin: 'android-apt'
+apply plugin: 'realm-android'
+android {
+    signingConfigs {
+        xm6leefun {
+            storeFile file('D:/workspace/studio/beybow/NorthBaby/app/xm6leefun.jks')
+            storePassword 'xm6leefun'
+            keyAlias 'weecot'
+            keyPassword 'weecot8023'
+        }
+    }
+    compileSdkVersion 27
+    buildToolsVersion '27.0.2'
+    dexOptions {
+//        incremental true
+        javaMaxHeapSize "4g"
+    }
+    defaultConfig {
+        ndk {
+            abiFilters "armeabi", "armeabi-v7a", "x86", "mips"
+        }
+        vectorDrawables.useSupportLibrary = true
+        applicationId "com.xm6leefun.zll_user"
+        minSdkVersion 14
+        targetSdkVersion 27
+        versionCode 1
+        versionName "1.0.0"
+        multiDexEnabled true
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+//            signingConfig signingConfigs.release
+            //开启混淆
+            minifyEnabled true
+            zipAlignEnabled true
+            //移除无用的resource文件
+            shrinkResources true
+
+//            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_7
+        targetCompatibility JavaVersion.VERSION_1_7
+    }
+    productFlavors {
+    }
+}
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+            exclude module: 'support-v4'
+            exclude group: 'com.android.support'
+    })
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    compile 'com.jakewharton:butterknife:8.7.0'
+    compile 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.22'
+    compile 'com.android.support:design:27.+'
+    compile 'com.android.support:support-v13:27.+'
+    compile 'com.android.support:appcompat-v7:27.+'
+    compile 'com.android.support:recyclerview-v7:27.+'
+    testCompile 'junit:junit:4.12'
+    apt 'com.jakewharton:butterknife-compiler:8.5.1'
+    compile files('libs/alibaba-json-1.1.0.jar')
+    compile files('libs/volley.jar')
+    compile files('libs/BASE64Decoder.jar')
+    compile files('libs/ksoap2-android-assembly-3.3.0-jar-with-dependencies.jar')
+    compile files('libs/MPChartLib.jar')
+    compile 'com.google.code.gson:gson:2.8.0'
+    //    Glide
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+    compile 'jp.wasabeef:glide-transformations:2.0.1'
+    compile files('libs/zxing.jar')
+    //RuntimePermissions
+
+//    compile 'com.github.hotchemi:permissionsdispatcher:${latest.version}'
+//    apt 'com.github.hotchemi:permissionsdispatcher-processor:${latest.version}'
+
+    compile 'com.github.hotchemi:permissionsdispatcher:2.4.0'
+    apt 'com.github.hotchemi:permissionsdispatcher-processor:2.4.0'
+//    compile 'com.github.hotchemi:permissionsdispatcher:2.3.1'
+//    apt 'com.github.hotchemi:permissionsdispatcher-processor:2.3.1'
+    //最新版本
+    compile 'com.youth.banner:banner:1.4.9'
+    compile 'com.squareup.retrofit2:retrofit:2.1.0'
+    compile 'com.squareup.retrofit2:converter-gson:2.1.0'
+    compile 'com.squareup.retrofit2:adapter-rxjava:2.1.0'
+    compile 'io.reactivex:rxandroid:1.2.1'
+    compile files('libs/core-1.58.0.0-sources.jar')
+    compile files('libs/prov-1.58.0.0.jar')
+    //    compile 'cn.pedant.sweetalert:library:1.3'
+
+    compile files('libs/android-smart-image-view-1.0.0.jar')
+//banner
+    compile 'com.github.donkingliang:CustomBanner:1.1.2'
+//微信登录包含统计功能
+//    compile 'com.tencent.mm.opensdk:wechat-sdk-android-with-mta:+'
+//    compile 'com.github.zllAndroid:utilsByzll:v1.4'
+//    compile 'com.github.zllAndroid:utilsByzll:v1.1'
+//    compile 'com.github.zllAndroid:CustomBanner-master:v1.1'
+//    compile 'com.github.zllAndroid:utilsByzll:v1.5'
+//    compile 'com.github.zllAndroid:ZllUtil:-SNAPSHOT'
+
+//    一款提供快速制作欢迎页的框架
+    compile 'com.github.apl-devs:appintro:v4.2.3'
+
+
+    /**
+     *  微信登录分享支付等。。
+     */
+    compile 'com.zhy:okhttputils:2.6.2'
+    compile 'com.tencent.mm.opensdk:wechat-sdk-android-with-mta:+'
+
+    compile 'com.vise.xiaoyaoyou:viselog:1.0.0'
+
+//侧拉框架
+//    compile 'com.mikepenz:iconics-core:3.0.3'
+//    compile 'com.mikepenz:fastadapter:3.2.4'
+    compile 'com.mikepenz:google-material-typeface:3.0.1.1.original@aar'
+    compile 'com.mikepenz:fontawesome-typeface:5.0.6.0@aar'
+    compile 'com.mikepenz:octicons-typeface:3.0.0.1@aar'
+    compile 'com.mikepenz:fastadapter-commons:3.2.4@aar'
+    compile 'com.mikepenz:itemanimators:1.0.2@aar'
+    compile 'com.mikepenz:crossfader:1.5.1@aar'
+    compile('com.mikepenz:crossfadedrawerlayout:1.0.1@aar')
+
+
+    compile("com.mikepenz:materialdrawer:6.0.7@aar") {
+        transitive = true
+    }
+
+
+    compile 'org.zackratos:ultimatebar:1.0.3'
+    compile 'com.gyf.barlibrary:barlibrary:2.3.0'
+
+
+//    about nfc
+//    compile 'com.github.zllAndroid:zllnfc:v1.1.1'
+//    compile 'com.github.zllAndroid:ZllnfcTag:v1.0.0'
+}

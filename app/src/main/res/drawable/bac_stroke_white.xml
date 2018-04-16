@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- 阴影部分 -->
+    <!-- 个人觉得更形象的表达：top代表下边的阴影高度，left代表右边的阴影宽度。其实也就是相对应的offset，solid中的颜色是阴影的颜色，也可以设置角度等等 -->
+    <item
+        android:left="2dp"
+        android:top="2dp">
+
+        <shape android:shape="rectangle">
+            <gradient
+                android:angle="270"
+                android:endColor="#0F000000"
+                android:startColor="#0F000000"/>
+
+            <corners
+                android:bottomLeftRadius="@dimen/dp6"
+                android:bottomRightRadius="@dimen/dp6"
+                android:topLeftRadius="@dimen/dp6"
+                android:topRightRadius="@dimen/dp6"/>
+        </shape>
+    </item>
+
+    <!-- 背景部分 -->
+    <!-- 形象的表达：bottom代表背景部分在上边缘超出阴影的高度，right代表背景部分在左边超出阴影的宽度（相对应的offset） -->
+    <item
+        android:bottom="3dp"
+        android:right="3dp">
+
+        <shape android:shape="rectangle">
+            <gradient
+                android:angle="270"
+                android:endColor="@color/white"
+                android:startColor="@color/white"/>
+
+            <corners
+                android:bottomLeftRadius="@dimen/dp6"
+                android:bottomRightRadius="@dimen/dp6"
+                android:topLeftRadius="@dimen/dp6"
+                android:topRightRadius="@dimen/dp6"/>
+        </shape>
+    </item>
+
+</layer-list>
+
+
+    <!--!&#45;&#45;<?xml version="1.0" encoding="utf-8"?>&ndash;&gt;-->
+<!--<layer-list xmlns:android="http://schemas.android.com/apk/res/android" >-->
+
+    <!--&lt;!&ndash;<stroke&ndash;&gt;-->
+    <!--&lt;!&ndash;android:width="@dimen/dp2"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:color="@color/grayeee" />&ndash;&gt;-->
+        <!--<item android:top="@dimen/dp10" android:bottom="0dp" android:left="0dp" android:right="0dp">-->
+            <!--<shape android:shape="rectangle">-->
+                <!--&lt;!&ndash;<gradient&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:angle="270"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:endColor="@color/grayeee88"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:startColor="@color/green"/>&ndash;&gt;-->
+                <!--<solid-->
+                <!--android:color="@color/gray_tr99"/>-->
+
+                <!--<corners-->
+                    <!--android:radius="@dimen/dp5"-->
+                    <!--android:topLeftRadius="@dimen/dp5"-->
+                    <!--android:topRightRadius="@dimen/dp5"-->
+                    <!--android:bottomLeftRadius="@dimen/dp5"-->
+                    <!--android:bottomRightRadius="@dimen/dp5"/>-->
+            <!--</shape>-->
+        <!--</item>-->
+    <!--<item android:top="0dp" android:bottom="@dimen/dp2" android:left="0dp" android:right="0dp">-->
+
+            <!--<shape android:shape="rectangle">-->
+                <!--<solid-->
+                    <!--android:color="@color/gray_tr66"/>-->
+                <!--&lt;!&ndash;<gradient&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:angle="270"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:endColor="@color/grayeee"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:startColor="@color/weshop_red"/>&ndash;&gt;-->
+
+                <!--<corners-->
+                    <!--android:radius="@dimen/dp4"-->
+                    <!--android:topLeftRadius="@dimen/dp4"-->
+                    <!--android:topRightRadius="@dimen/dp4"-->
+                    <!--android:bottomLeftRadius="@dimen/dp4"-->
+                    <!--android:bottomRightRadius="@dimen/dp4"/>-->
+            <!--</shape>-->
+        <!--</item>-->
+    <!--<item android:top="0dp" android:bottom="@dimen/dp2" android:left="0dp" android:right="0dp">-->
+        <!--<shape android:shape="rectangle">-->
+            <!--<solid-->
+                <!--android:color="@color/gray_tr33"/>-->
+            <!--<corners-->
+                <!--android:radius="@dimen/dp4"-->
+                <!--android:topLeftRadius="@dimen/dp4"-->
+                <!--android:topRightRadius="@dimen/dp4"-->
+                <!--android:bottomLeftRadius="@dimen/dp4"-->
+                <!--android:bottomRightRadius="@dimen/dp4"/>-->
+        <!--</shape>-->
+    <!--</item>-->
+        <!--&lt;!&ndash;<gradient&ndash;&gt;-->
+            <!--&lt;!&ndash;android:startColor="@color/grayeee88"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:centerColor="@color/gray_trans666"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:endColor="@color/gray333"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:angle="270"&ndash;&gt;-->
+            <!--&lt;!&ndash;/>&ndash;&gt;-->
+        <!--&lt;!&ndash;阴影颜色&ndash;&gt;-->
+        <!--&lt;!&ndash;<gradient&ndash;&gt;-->
+            <!--&lt;!&ndash;android:startColor="@color/grayeee88"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:centerColor="@color/gray_trans666"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:endColor="@color/gray333"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:useLevel="true"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:angle="90"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:type="radial"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:centerX="0"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:centerY="0"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:gradientRadius="90"/>&ndash;&gt;-->
+    <!--&lt;!&ndash;<solid&ndash;&gt;-->
+    <!--&lt;!&ndash;android:color="@color/gray_trans666"/>&ndash;&gt;-->
+    <!--&lt;!&ndash;&ndash;&gt;-->
+    <!--&lt;!&ndash;<item >&ndash;&gt;-->
+        <!--&lt;!&ndash;<shape android:shape="rectangle">&ndash;&gt;-->
+            <!--&lt;!&ndash;<solid android:color="#10666666"/>&ndash;&gt;-->
+            <!--&lt;!&ndash;<corners android:radius="3dp" />&ndash;&gt;-->
+
+        <!--&lt;!&ndash;</shape>&ndash;&gt;-->
+    <!--&lt;!&ndash;</item>&ndash;&gt;-->
+    <!--&lt;!&ndash;最上面的View，距离底部2dp的高度，这样底层的View就会露出，这样就有阴影效果了&ndash;&gt;-->
+    <!--<item android:top="0dp" android:bottom="@dimen/dp2" android:left="0dp" android:right="@dimen/dp1">-->
+        <!--<shape android:shape="rectangle">-->
+            <!--<solid android:color="@color/white"/>-->
+            <!--<corners-->
+                <!--android:radius="7dp"-->
+                <!--android:topLeftRadius="7dp"-->
+                <!--android:topRightRadius="7dp"-->
+                <!--android:bottomLeftRadius="7dp"-->
+                <!--android:bottomRightRadius="7dp"/>-->
+            <!--&lt;!&ndash;<stroke android:color="@color/gray999"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:width="2dp"/>&ndash;&gt;-->
+        <!--</shape>-->
+    <!--</item>-->
+    <!--&lt;!&ndash;<item&ndash;&gt;-->
+        <!--&lt;!&ndash;android:bottom="4px"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:left="2px"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:right="3px"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:top="2px">&ndash;&gt;-->
+        <!--&lt;!&ndash;<shape android:shape="rectangle" >&ndash;&gt;-->
+            <!--&lt;!&ndash;<solid android:color="@color/white" />&ndash;&gt;-->
+
+            <!--&lt;!&ndash;<corners android:radius="10dp" />&ndash;&gt;-->
+            <!--&lt;!&ndash;<padding&ndash;&gt;-->
+                <!--&lt;!&ndash;android:bottom="15dp"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:left="15dp"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:right="15dp"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:top="15dp" />&ndash;&gt;-->
+
+        <!--&lt;!&ndash;</shape>&ndash;&gt;-->
+    <!--&lt;!&ndash;</item>&ndash;&gt;-->
+    <!--&lt;!&ndash;<item>&ndash;&gt;-->
+        <!--&lt;!&ndash;<shape android:shape="rectangle" >&ndash;&gt;-->
+            <!--&lt;!&ndash;<solid android:color="#BBB" />&ndash;&gt;-->
+
+            <!--&lt;!&ndash;<corners android:radius="10dp" />&ndash;&gt;-->
+        <!--&lt;!&ndash;</shape>&ndash;&gt;-->
+    <!--&lt;!&ndash;</item>&ndash;&gt;-->
+    <!--&lt;!&ndash;设置边框 宽度=1px，颜色为skyBluesss&ndash;&gt;-->
+    <!--&lt;!&ndash;<stroke&ndash;&gt;-->
+    <!--&lt;!&ndash;android:width="1px"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:color="@color/gray333" />&ndash;&gt;-->
+
+
+
+    <!--&lt;!&ndash;<item>&ndash;&gt;-->
+        <!--&lt;!&ndash;<shape android:shape="rectangle" >&ndash;&gt;-->
+            <!--&lt;!&ndash;&lt;!&ndash; 圆角 &ndash;&gt;&ndash;&gt;-->
+            <!--&lt;!&ndash;<corners&ndash;&gt;-->
+                <!--&lt;!&ndash;android:radius="7dp"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:topLeftRadius="7dp"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:topRightRadius="7dp"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:bottomLeftRadius="7dp"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:bottomRightRadius="7dp"/>&lt;!&ndash; 设置圆角半径 &ndash;&gt;&ndash;&gt;-->
+            <!--&lt;!&ndash;&lt;!&ndash;<stroke&ndash;&gt;&ndash;&gt;-->
+            <!--&lt;!&ndash;&lt;!&ndash;android:width="@dimen/dp2"&ndash;&gt;&ndash;&gt;-->
+            <!--&lt;!&ndash;&lt;!&ndash;android:color="@color/grayeee" />&ndash;&gt;&ndash;&gt;-->
+            <!--&lt;!&ndash;<solid&ndash;&gt;-->
+                <!--&lt;!&ndash;android:color="@color/white"/>&ndash;&gt;-->
+        <!--&lt;!&ndash;</shape>&ndash;&gt;-->
+    <!--&lt;!&ndash;</item>&ndash;&gt;-->
+<!--</layer-list>-->
+    <!--&lt;!&ndash; 描边虚线-->
+    <!--android:dashWidth="1dp"-->
+           <!--android:dashGap="2dp"-->
+       <!--<solid 填充-->
+
+           <!--android:color="@android:color/white"/>-->
+
+           <!--渐变-->
+       <!--<gradient-->
+           <!--android:startColor="@android:color/white"-->
+           <!--android:centerColor="@android:color/black"-->
+           <!--android:endColor="@android:color/black"-->
+           <!--android:useLevel="true"-->
+           <!--android:angle="45"-->
+           <!--android:type="radial"-->
+           <!--android:centerX="0"-->
+           <!--android:centerY="0"-->
+           <!--android:gradientRadius="90"/>-->
+     <!--&ndash;&gt;-->

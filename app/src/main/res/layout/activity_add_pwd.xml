@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="@dimen/dp40"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp10"
+        android:orientation="horizontal"
+        >
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="加密结果：" />
+    <TextView
+        android:id="@+id/tv_add_result"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp10"
+        android:orientation="horizontal"
+        >
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="解密结果：" />
+    <TextView
+        android:id="@+id/tv_jie_result"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/dp20"
+        android:orientation="vertical"
+        >
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+
+                >
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    app:srcCompat="@drawable/login_user"
+                    android:layout_margin="@dimen/dp5"
+
+                    />
+
+                <EditText
+                    android:id="@+id/input_data"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:background="@null"
+                    android:ems="11"
+                    android:maxLength="11"
+                    android:layout_weight="1"
+                    android:textSize="@dimen/sp16"
+                    android:layout_marginLeft="@dimen/margin5dp"
+                    android:inputType="textPersonName"
+                    android:hint="请输入加密数据" />
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/heigt_pointfive"
+                android:background="@color/grayeee"
+                android:layout_marginBottom="@dimen/dp10"
+                />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/addpwd_btn_add"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:layout_margin="@dimen/dp10"
+            android:textSize="@dimen/sp14"
+            android:background="@drawable/btn_stroke_nor"
+            android:text="加密" />
+        <Button
+            android:id="@+id/addpwd_btn_jie"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:layout_margin="@dimen/dp10"
+            android:textSize="@dimen/sp14"
+            android:background="@drawable/btn_stroke_nor"
+            android:text="解密" />
+    </LinearLayout>
+</LinearLayout>

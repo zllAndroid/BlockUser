@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.xm6leefun.zll_user">
+    <uses-feature
+        android:name="android.hardware.nfc"
+        android:required="true" />
+    <uses-permission android:name="android.permission.NFC" />
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-feature android:name="android.hardware.camera" />        <!-- 使用照相机权限 -->
+    <uses-feature android:name="android.hardware.camera.autofocus" /><!-- 自动聚焦权限 -->
+
+    <uses-feature android:name="android.hardware.camera.flash" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD"/>
+    <application
+        android:name=".base.MyApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/app_logo512"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme"
+       >
+        <activity
+            android:name=".main_code.about_login.AppStartActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name=".main_code.mains.NewMainActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+            <action android:name="android.intent.action.VIEW"/>
+            <category android:name="android.intent.category.DEFAULT"/>
+            <!--scheme 允许在浏览器中打开-->
+            <!--<category android:name="android.intent.category.APP_BROWSER"/>-->
+            <category android:name="android.intent.category.BROWSABLE"/>
+            <!--scheme 相关信息配置-->
+            <data android:scheme="open"
+            android:host="blockuser.com"/>
+            </intent-filter>
+
+        </activity>
+
+        <activity
+            android:name=".main_code.about_person_user.PersonAlreadyActivatedActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/SwipeBack.Transparent.Theme">
+
+        </activity>
+        <activity
+            android:name=".main_code.about_login.LoginActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait">
+
+        </activity>
+        <activity
+            android:name=".main_code.about_login.WXLoginActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait">
+
+        </activity>
+        <activity
+            android:name=".main_code.about_login.LoginRetroActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait">
+            <!--<intent-filter>-->
+            <!--<action android:name="android.intent.action.MAIN" />-->
+            <!--<category android:name="android.intent.category.LAUNCHER" />-->
+            <!--</intent-filter>-->
+        </activity>
+        <activity
+            android:name=".main_code.about_login.AddPwdActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait">
+
+        </activity>
+
+        <activity
+            android:name=".main_code.about_login.ForgetPswActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/SwipeBack.Transparent.Theme"
+            >
+
+        </activity>
+        <activity
+            android:name=".main_code.mains.MainActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait">
+
+            <!--<intent-filter>-->
+            <!--<action android:name="android.intent.action.VIEW"/>-->
+            <!--<category android:name="android.intent.category.DEFAULT"/>-->
+            <!--&lt;!&ndash;scheme 允许在浏览器中打开&ndash;&gt;-->
+            <!--&lt;!&ndash;<category android:name="android.intent.category.APP_BROWSER"/>&ndash;&gt;-->
+            <!--<category android:name="android.intent.category.BROWSABLE"/>-->
+            <!--&lt;!&ndash;scheme 相关信息配置&ndash;&gt;-->
+            <!--<data android:scheme="open"-->
+            <!--android:host="blockuser.com"/>-->
+            <!--</intent-filter>-->
+        </activity>
+
+
+        <activity android:name=".main_code.about_new_main.SecuritySaylsActivity"
+            android:launchMode="singleTop"
+            android:theme="@style/SwipeBack.Transparent.Theme"
+            android:screenOrientation="portrait"
+            >
+        </activity>
+        <activity android:name=".main_code.home_order.H5TestActivity"
+            android:launchMode="singleTop"
+
+            android:theme="@style/SwipeBack.Transparent.Theme"
+            android:screenOrientation="portrait"
+            >
+            <!--<intent-filter>-->
+                <!--&lt;!&ndash;<action android:name="android.intent.action.VIEW"/>&ndash;&gt;-->
+                <!--&lt;!&ndash;<category android:name="android.intent.category.DEFAULT"/>&ndash;&gt;-->
+                <!--&lt;!&ndash;scheme 允许在浏览器中打开&ndash;&gt;-->
+                <!--&lt;!&ndash;<category android:name="android.intent.category.APP_BROWSER"/>&ndash;&gt;-->
+                <!--&lt;!&ndash;<category android:name="android.intent.category.BROWSABLE"/>&ndash;&gt;-->
+                <!--&lt;!&ndash;scheme 相关信息配置&ndash;&gt;-->
+                <!--<data android:scheme="open"-->
+                    <!--android:host="blockuser.com"/>-->
+            <!--</intent-filter>-->
+        </activity>
+
+        <activity android:name=".main_code.home_order.ScanCodeActivity"
+            android:launchMode="singleTop"
+            android:theme="@style/SwipeBack.Transparent.Theme"
+            android:screenOrientation="portrait"
+            >
+        </activity>
+
+        <!--K线图-->
+        <activity android:name=".main_code.about_kchar.KkkActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="sensor"
+            >
+
+        </activity>
+        <!--H5页面-->
+        <activity android:name=".main_code.popular_activity.GoH5Activity"
+            android:launchMode="singleTop"
+            android:theme="@style/SwipeBack.Transparent.Theme"
+            android:screenOrientation="portrait"
+            >
+        </activity>
+        <activity android:name=".main_code.about_mine.mine_set.ChangePhoneActivity"
+            android:launchMode="singleTop"
+            android:theme="@style/SwipeBack.Transparent.Theme"
+            android:screenOrientation="portrait">
+        </activity>
+        <!--我的全部activity-->
+
+
+        <!--微信登录配置 start-->
+        <activity android:name=".wxapi.WXEntryActivity"
+            android:exported="true"
+            android:theme="@style/wx_login_style"
+            android:configChanges="orientation|keyboardHidden|screenSize" />
+        <!--微信登录配置 end-->
+    </application>
+
+</manifest>
